@@ -1,4 +1,4 @@
 # Collage Management System
-*A
-*B
-*C
+**A
+**B
+**C
