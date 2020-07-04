@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane"
+          prefHeight="400.0"
+          prefWidth="600.0"
+          hgap="10"
+          vgap="10"
+          fx:controller="Manager.ManagerController">
+    
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+    
+    <Text id="welcome-text" text="Welcome" 
+         GridPane.columnIndex="0" GridPane.rowIndex="0"
+        GridPane.columnSpan="2"/>
+ 
+        <Button fx:id="Rooms_btn" GridPane.columnIndex="0" GridPane.rowIndex="1" text="All Rooms" onAction="#handleOpenAllRooms" >
+            
+            
+            
+        </Button>
+ 
+        <Button fx:id="Bookings_btn" GridPane.columnIndex="1" GridPane.rowIndex="1" text="All Bookings" onAction="#handleOpenAllBookings" >
+            
+            
+            
+        </Button>
+        
+        <Button fx:id="Users_btn" GridPane.columnIndex="1" GridPane.rowIndex="1" text="All Users" onAction="#handleOpenAllUsers"  >
+            
+            <GridPane.margin>
+                        <Insets top="0" right="0" bottom="0" left="80"/>
+            </GridPane.margin>
+            
+            
+        </Button>
+        
+<!--    <HBox spacing="10" alignment="bottom_right" 
+        GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button text="Sign In"     
+        onAction="#handleSubmitButtonAction"/>
+    </HBox>-->
+
+    <Text fx:id="actiontarget"
+        GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+    
+    
+</GridPane>

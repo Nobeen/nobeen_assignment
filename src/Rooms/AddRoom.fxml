@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?> 
+
+<GridPane id="AddRooms"
+          prefHeight="100.0"
+          prefWidth="200.0"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="Rooms.RoomsController">
+    
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <Label text="Enter Room No" GridPane.columnIndex="0" GridPane.rowIndex="0"   ></Label>
+    <TextField fx:id="roomId"  GridPane.columnIndex="0" GridPane.rowIndex="1" ></TextField>
+   
+    <Label text="Enter Room No" GridPane.columnIndex="0" GridPane.rowIndex="0"   ></Label>
+    <ComboBox fx:id="categoies" id="categoies"  GridPane.columnIndex="0" GridPane.rowIndex="2" >
+        <items>
+                <FXCollections fx:factory="observableArrayList" >
+                </FXCollections>
+        </items>
+    </ComboBox>
+    
+    <Button 
+        fx:id="Add"
+        text="Add"
+        onAction="#handlerAddRoomsConfirm"
+        GridPane.columnIndex="0"
+        GridPane.rowIndex="3"
+        alignment="BOTTOM_RIGHT"  >
+    </Button>
+    
+    
+</GridPane>

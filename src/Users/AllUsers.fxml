@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import Model.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import javafx.geometry.*?>
+
+<GridPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" 
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="Users.UsersController">
+    
+    
+       <Button fx:id="Users_btn" GridPane.columnIndex="0" GridPane.rowIndex="0" text="Add Users" onAction="#handleAddUser"  >
+            
+        </Button>
+    
+    <TableView fx:id="all_users"
+        
+        GridPane.columnIndex="0" 
+        GridPane.rowIndex="1" 
+        prefWidth="550" 
+    
+    >
+        
+         <columns>
+          <TableColumn text="Id">
+              <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+                </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn text="Name">
+               <cellValueFactory>
+                  <PropertyValueFactory property="name" />
+                </cellValueFactory>
+          </TableColumn>
+        
+          <TableColumn text="Username">
+              <cellValueFactory>
+                  <PropertyValueFactory property="username" />
+                </cellValueFactory>
+          </TableColumn>
+        
+          <TableColumn text="Role">
+              <cellValueFactory>
+                  <PropertyValueFactory property="role" />
+                </cellValueFactory>
+          </TableColumn>
+
+    
+       
+     </columns>   
+    <items>
+
+        <FXCollections fx:factory="observableArrayList">
+
+        </FXCollections>
+        
+        
+    </items>
+        
+    </TableView>
+    
+</GridPane>

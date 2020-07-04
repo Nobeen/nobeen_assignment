@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import Model.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+<?import javafx.geometry.*?>
+
+<GridPane id="AllRooms"
+          prefHeight="400.0"
+          prefWidth="600.0"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="Rooms.RoomsController"
+        
+
+>
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    
+    <Button 
+        fx:id="add_rooms"
+        text="Add Rooms"
+        GridPane.columnIndex="0" 
+        GridPane.rowIndex="0" 
+        onAction="#handlerAddRooms" 
+    
+    >
+    </Button>
+    
+     <Button 
+        fx:id="back_btn"
+        text="Go Back"
+        GridPane.columnIndex="1" 
+        GridPane.rowIndex="0" 
+        onAction="#handlerGotoDashboard" 
+    
+    >
+    </Button>
+    
+    <TableView fx:id="Rooms" 
+        GridPane.columnIndex="0" 
+        GridPane.rowIndex="1" 
+     >
+        
+         <columns>
+          <TableColumn text="Id">
+              <cellValueFactory>
+                  <PropertyValueFactory property="id" />
+                </cellValueFactory>
+          </TableColumn>
+
+          <TableColumn text="Room Name">
+               <cellValueFactory>
+                  <PropertyValueFactory property="roomId" />
+                </cellValueFactory>
+          </TableColumn>
+        
+          <TableColumn text="Availblity">
+              <cellValueFactory>
+                  <PropertyValueFactory property="availblilty" />
+                </cellValueFactory>
+          </TableColumn>
+          <TableColumn text="Action">
+              <cellValueFactory>
+                  <PropertyValueFactory property="delete" />
+                </cellValueFactory>
+          </TableColumn>
+    
+       
+     </columns>   
+    <items>
+
+        <FXCollections fx:factory="observableArrayList">
+
+        </FXCollections>
+        
+        
+    </items>
+    </TableView>
+    
+    
+</GridPane>
