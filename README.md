@@ -1,4 +1,5 @@
 # Collage Management System
-**A
-**B
-**C
+## Sub Heading
+* Bullet-1
+* Bullet-2\
+This is paragraph
